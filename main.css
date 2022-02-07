@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 4)),
+    url('./images/cold.png') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#weather {
+  min-width: 350px;
+  background-color: green;
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: center;
+  background: url('./images/cold.png') no-repeat center/cover;
+}
+
+/* hot and cold */
+.hot,
+.cold,
+.hot #weather,
+.cold #weather {
+  transition: 0.4s;
+}
+
+.hot {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 4)),
+    url('./images/hot.png') no-repeat center/cover;
+}
+.hot #weather {
+  background: url('./images/hot.png') no-repeat center/cover;
+}
+
+.cold {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 4)),
+    url('./images/cold.png') no-repeat center/cover;
+}
+.cold #weather {
+  background: url('./images/cold.png') no-repeat center/cover;
+}
+
+/* content */
+.content {
+  transition: 0.4s;
+}
+
+.search {
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0 15px 0 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.4s;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-bottom: 40px;
+}
+
+.search:focus {
+  border-radius: 15px 0 15px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.capital,
+.time,
+.temperature,
+.short-desc {
+  color: white;
+  font-weight: bold;
+}
+
+.capital {
+  font-size: 30px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.time {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.temperature {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 65px;
+  margin: 20px 30px;
+  padding: 16px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.short-desc {
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.4);
+  font-size: 35px;
+}
+
+.more-desc {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-top: 25px;
+}
+
+.more-desc div {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.more-desc i {
+  margin: 10px 0;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
